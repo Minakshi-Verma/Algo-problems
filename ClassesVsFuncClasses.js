@@ -70,15 +70,20 @@ lime.color = "Yellow"
 //CLASSES
 //Other way to define a class is using class declaration
 //Syntactical sugar(introduced inES6 )over JS existing prototype based inhritnace
-//More simpleand clear to deal with inheritance
+//More simple and clear to deal with inheritance
 
 class Polygon {
     constructor(height, width){
         this.height = height
         this.width = width
     }
+    get area(){
+        return this.height * this.width
+    }
 }
 
 let p = new Polygon(1, 20)
 
-//IMPORTNAT: Functional declaration are hoisted( you can reference them before there rae declared) 
+//IMPORTNAT: Functional declaration are hoisted( you can reference them before there are declared) 
+// constructor method is a special method that we use to create and initialize the object of a class
+// we can use super keyword to call parent class constructor
