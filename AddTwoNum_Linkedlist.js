@@ -45,15 +45,17 @@ var addTwoNumbers = function(l1, l2) {
         current= solution
 
         while(p1 || p2){
-            num1 = p1? p1.value: null
-            num2 = p2? p2.value: null
-            if(num1 + num2 +carry>9){
+            num1 = p1? p1.val: null
+            num2 = p2? p2.val: null
+            if(num1 + num2 + carry > 9){
               // deduct 10 and pass 1 as carry
-                current.next= new ListNode(num1+num2+carry-10)
+                current.next= new ListNode(num1 + num2 + carry - 10)
+                current = current.next
                 carry=1   
             }else{
                 //do nothing and add them as such
                 current.next=new ListNode(num1+num2+carry)
+                current = current.next
                 carry= 0
             }
             if(p1) p1= p1.next
